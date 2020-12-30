@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="th">
+<head>
+
+<script src="js/jquery.min.js"></script>
+
+    <script>
+    function set_validator_errors(){
+        orderValidator.errorTitle = 'โปรดแก้ไขข้อผิดพลาดต่อไปนี้'; 
+
+        orderValidator.errorNameField = 'ชื่อ'; 
+        orderValidator.errorNameMess = 'ใส่ชื่อของคุณ'; 
+        
+        orderValidator.errorPhoneField = 'หมายเลขโทรศัพท์'; 
+        orderValidator.errorPhoneMess = 'ป้อนหมายเลขโทรศัพท์ที่ถูกต้อง'; 
+        
+        orderValidator.errorAddress = 'ป้อนที่อยู่ที่ถูกต้อง'; 
+        orderValidator.errorRequired = 'ช่องที่ต้องกรอก'; 
+        orderValidator.errorMaxLength = 'อักขระสูงสุด {1} ตัวที่ถูกต้อง'; 
+        orderValidator.errorMinLength = 'อักขระขั้นต่ำ {1} ตัวที่ถูกต้อง'; 
+        orderValidator.errorEmailField = 'อีเมล';
+        orderValidator.errorEmail = 'ระบุอีเมลไม่ถูกต้อง';
+        }
+    </script>
+    
+<script>
+
+
+
+
+
+</script><script src="js/form.validate.js"></script>
+<script src="js/form.incomplete.js"></script>
+<script src="js/main2.js"></script>
+
+
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ซื้อ Flexadel ได้ในราคาไม่แพง. ราคา, ความเห็นของผู้ใช้, สั่งซื้อ Flexadel เลยตอนนี้!</title>
+  <meta name="viewport" content="maximum-scale=1,minimum-scale=1,width=device-width,height=device-height,target-densitydpi=device-dpi">
+  <link rel="stylesheet" href="css/main.css">
+
+		
+		<style>
+/* Code tidied up by ScrapBook */
+.ever-popup-build { position: fixed; opacity: 0; z-index: -1; top: 0px; left: -9999px; }
+</style><style>
+/* Code tidied up by ScrapBook */
+.ever-popup__body.ever-mobile { display: none; }
+.ever-popup { position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7) none repeat scroll 0% 0%; z-index: 111; display: none; overflow: auto; }
+.ever-popup__body { position: static; float: none; display: block; margin: 0px auto; width: auto; }
+.ever-popup.show { display: block; align-items: center; }
+.ever-popup__inner { position: relative; margin: 0px auto; padding-top: 35px; }
+.ever-popup__close { width: 35px; height: 30px; position: absolute; cursor: pointer; top: 0px; right: 0px; z-index: 1; transition: all 0.3s ease 0s; }
+.ever-popup__close::after, .ever-popup__close::before { content: ""; position: absolute; right: 0px; top: 10px; width: 35px; height: 10px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; transition: all 1s ease 0s; }
+.ever-popup__close::after { transform: rotate(-45deg); }
+.ever-popup__close::before { transform: rotate(45deg); }
+@media screen and (max-width: 1000px) {
+  .ever-popup__body.ever-desktop { display: none; }
+  .ever-popup__body.ever-mobile { display: block; }
+}
+
+/* Code tidied up by ScrapBook */
+.main-banner img { max-width: 61px; max-height: 49px; margin: 0px ! important; }
+.main-banner { box-sizing: border-box; position: fixed; top: 0px; left: 0px; width: 100vw; display: flex; justify-content: center; align-items: center; padding: 0px 10px; background-color: rgb(227, 12, 12); background-image: url("images/banner-bg.png"); background-repeat: no-repeat; background-size: cover; background-position: center center; z-index: 97; }
+.main-banner.banner-bottom { top: auto; bottom: 0px; }
+.main-banner p { margin-top: 0px ! important; margin-bottom: 0px ! important; font-family: Roboto,sans-serif; color: rgb(255, 255, 255) ! important; margin-left: 20px; text-align: center; padding: 10px 0px; }
+.main-banner p b { color: rgb(255, 255, 255); display: block; font-size: 19px; font-weight: 700; margin-bottom: 5px; }
+.main-banner p .ban-small { color: rgb(255, 255, 255); display: block; font-size: 17px; line-height: 1.2; font-weight: 400; }
+@media screen and (max-width: 1219px) {
+  .main-banner p .ban-small { font-size: 15px; }
+  .main-banner p b { font-size: 17px; }
+  .main-banner img { max-width: 50px; max-height: 40px; }
+  .main-banner p { max-width: 920px; }
+}
+@media screen and (max-width: 1023px) {
+  .main-banner .delete_mob { display: none; }
+  .main-banner p { max-width: 500px; }
+  .main-banner p b { font-size: 16px; }
+  .main-banner p .ban-small { font-size: 15px; }
+}
+@media screen and (max-width: 767px) {
+  .main-banner p { max-width: 420px; }
+  .main-banner p b { font-size: 15px; }
+  .main-banner p .ban-small { font-size: 14px; }
+}
+@media screen and (max-width: 639px) {
+  .main-banner img { max-width: 35px; max-height: 30px; }
+  .main-banner p { margin-left: 10px; }
+}
+@media screen and (max-width: 479px) {
+  .main-banner img { max-width: 50px; max-height: 100%; }
+  .main-banner p { max-width: 250px; line-height: 1.1; }
+  .main-banner p b { line-height: 18px; font-size: 13px; margin-bottom: 2px; }
+  .main-banner p .ban-small { line-height: 17px; font-size: 12px; }
+}
+@media screen and (max-width: 370px) {
+  .main-banner img { max-width: 35px; }
+}
+.main-banner p span { color: rgb(255, 255, 255) ! important; }
+.main-banner * { box-sizing: border-box; }
+</style>
+
+
+
+<style type="text/css">
+/* Code tidied up by ScrapBook */
+.order-modal, .users-online { cursor: pointer; position: fixed; right: 20px; top: 120px; width: 320px; background-color: rgba(0, 0, 0, 0.9); color: rgb(255, 255, 255); transition: all 1s ease 0s; font-size: 19px; line-height: 22px; border-radius: 10px; z-index: 9999; opacity: 0; visibility: hidden; }
+.order-modal > div, .users-online > div { margin: 10px; }
+.order-modal > div > span, .users-online > div > span { display: inline-block; vertical-align: middle; width: calc(100% - 75px); margin-left: 10px; }
+.show-order, .show-order-last { opacity: 1; visibility: visible; transition: all 1s ease 0s; }
+.blink { color: red ! important; animation-name: blinker; animation-duration: 1s; animation-timing-function: linear; animation-iteration-count: infinite; text-decoration: line-through; }
+.blink_me { font-size: 24px; color: red; font-weight: 700; }
+.show-order-last::before, .show-order::before { transform: rotate(45deg); }
+.show-order-last::after, .show-order-last::before, .show-order::after, .show-order::before { content: ""; position: absolute; right: 0px; top: -15px; width: 15px; height: 5px; background: red none repeat scroll 0% 0%; transition: all 1s ease 0s; }
+.show-order-last::after, .show-order::after { transform: rotate(-45deg); }
+.everad-sprite { background: transparent url("data:image/png;base64,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") no-repeat scroll 0% 0%; display: inline-block; vertical-align: middle; width: 50px; height: 50px; margin-right: 5px; }
+.everad-sprite-bucket { background-position: -5px -5px; }
+.everad-sprite-callback { background-position: -65px -5px; }
+.everad-sprite-online_user { background-position: -5px -65px; }
+@media screen and (max-width: 767px) {
+  .cookie-popup-on .order-modal, .cookie-popup-on .users-online { top: auto; right: 10px; bottom: 35px; width: 300px; }
+}
+@media screen and (max-width: 405px) {
+  .cookie-popup-on .order-modal, .cookie-popup-on .users-online { bottom: 45px; }
+}
+@media screen and (max-width: 335px) {
+  .cookie-popup-on .order-modal, .cookie-popup-on .users-online { bottom: 60px; }
+}
+@media screen and (max-width: 767px) {
+  .order-modal, .users-online { top: auto; right: 10px; bottom: 10px; width: 300px; }
+}
+@keyframes blinker {
+0% { opacity: 1; }
+50% { opacity: 0; }
+100% { opacity: 1; }
+}
+@keyframes blinker {
+0% { opacity: 1; }
+50% { opacity: 0; }
+100% { opacity: 1; }
+}
+@keyframes blinker {
+0% { opacity: 1; }
+50% { opacity: 0; }
+100% { opacity: 1; }
+}
+</style>
+
+<style>
+/* Code tidied up by ScrapBook */
+.ev-footer, .create_rom_footer { display: flex; align-items: center; padding: 15px 0px; justify-content: center; flex-direction: column; }
+.ev-footer__logo svg { display: flex; width: 30px; height: 30px; }
+.ev-footer__logo a { text-decoration: none; font-size: 14px; font-family: inherit; }
+.ev-footer__link { display: flex; text-decoration: underline; }
+.ev-footer__link:hover { text-decoration: none; }
+:active, :focus, :hover, :visited, a, a:active, a:focus, a:hover, a:visited { outline: 0px none ! important; }
+*::-moz-focus-inner { border: 0px none; outline: 0px none; }
+</style>
+
+</head>
+
+<body class="timer-different body-banner" data-invalid-name-text="กรุณาระบุชื่อที่ถูกต้อง" data-invalid-phone-text="กรุณาระบุหมายเลขโทรศัพท์ที่ถูกต้อง ไม่เช่นนั้นเราจะไม่สามารถติดต่อกับคุณได้" style="margin-top: 0px ! important; margin-bottom: 0px ! important;">
+  <header class="header-top">
+    <div class="container">
+      <div class="wrapper header-top__wrapper">
+        <p class="header-top__attention"> ข้อเสนอพิเศษ สำหรับผู้ที่อาศัยอยู่ในประเทศไทย รีบสั่งซื้อด่วน! </p>
+        <div class="timer_container">  </div>
+      </div>
+    </div>
+  </header>
+  <section class="header block">
+    <div class="wrap">
+
+      <div class="header__main">
+        <picture>
+          <source type="image/webp" srcset="images/header_back-1.webp">
+          <img src="images/header_back-1.png" alt="man" class="man">
+        </picture>
+       
+        <div class="product-block">  
+          <picture>
+            
+            <img class="product-photo" src="images/flexadel.png" alt="product">
+          </picture>
+        </div>
+        <div class="info">
+          <div class="logo">
+            <span class="reviews__subtitle--orange">Flexadel</span>
+          </div>
+          <h1 class="header__title"><span class="text-bold">ตัวช่วยสำหรับข้อต่อ!</span></h1>
+          <p class="main__text">เรียกคืนความสะดวกสบายและความมั่นใจ <br>ในทุกย่างก้าวของชีวิต!</p>
+          <ul class="info__list">
+            <li class="item"><i class="fico fico-check"></i> <b class="text-semibold">ช่วยบรรเทาปวด </b>และกำจัดอาการบวม </li>
+            <li class="item"><i class="fico fico-check"></i> <b class="text-semibold">ช่วยฟื้นฟูการเคลื่อนไหว</b>ของข้อต่อ </li>
+            <li class="item"><i class="fico fico-check"></i> <b class="text-semibold">ช่วยกำจัด</b>ความรู้สึกไม่สบาย<br>และอาการฝืดขณะเคลื่อนไหว </li>
+          </ul>
+          <div class="certificates">
+            <img src="images/icon1.png">
+            <img src="images/icon3.png">
+            <img src="images/expert1.png">
+          </div>
+        </div>
+        <div class="main__wrap">
+          <div class="main__form">
+            <p class="main__form-title"> ภายในวันที่ <br> <span class="date-0 color-orange" data-format="dd month">03 สิงหาคม</span> เท่านั้น </p>
+            <div class="price">
+              <div class="price-item price-old">
+                <p class="price-title price-title__old">ราคาปกติ:</p>
+                <div> <span class="x_price_previous"><x-oldprice>1980</x-oldprice></span><span class="x_currency"><x-currency>฿</x-currency></span> </div>
+              </div>
+              <span class="price-line"></span>
+              <div class="price-item price-new">
+                <p class="price-title price-title__new">ราคาพิเศษ:</p>
+                <div> <span class="x_price_current"><x-newprice>990</x-newprice></span><span class="x_currency"><x-currency>฿</x-currency></span> </div>
+              </div>
+            </div>
+            <form action="https://healthbestblog.space/cpatl/api.php" method="post" class="x_order_form form">
+			    
+    <select name="offer" class="form-control country_chang" style="display: none;">
+        <option data-country-code="TH" selected="selected" value="19155">
+            Таиланд        </option>
+    </select>
+
+                  <div class="input-box">
+                <i class="fico fico-name"></i>
+                <input class="form-field form-name" name="name" placeholder="ชื่อ-นามสกุล" required autocomplete="name" type="text">
+              </div>
+              <div class="input-box">
+                <i class="fico fico-tel"></i>
+                <input class="form-field form-tel" name="phone" placeholder="หมายเลขโทรศัพท์" required autocomplete="tel" type="tel">
+              </div>
+              <button type="submit" class="form__btn btn"> <span class="btn__text btn__text-1">สั่งซื้อ </span><span class="btn__text btn__text-2">พร้อมส่วนลด</span> </button>
+              <div class="users-count">
+                <p>มีคนดูอยู่ตอนนี้ 20 คน</p>
+              </div>
+              			<input type="hidden" name="stream_hid" value="wV6URo6j">
+			<input type="hidden" name="offer_id" value="4692">
+
+			
+			<input type="hidden" name="country" value="TH"> <!-- формат ISO 3166-1 Alpha-2 - https://ru.wikipedia.org/wiki/ISO_3166-1 -->
+
+			<input type="hidden" name="sid1" value="alex">
+			<input type="hidden" name="sid2" value="alex2">
+			<input type="hidden" name="sid3" value="alex3">
+			<input type="hidden" name="redirect_url" value="https://amazinghealth.github.io/germitox-ita/success/index.html">
+            </form>
+            <div class="main__discount discount">
+              <span class="discount-text">-50%</span>
+            </div>
+          </div>
+          <p class="lastpack-text"> หมายเหตุ! สินค้าคงเหลือ <span class="lastpack">60</span>  ชิ้น </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+ 
+  <section class="danger block">
+    <div class="wrap"><img class="danger__joint wow flipInX" alt="joint" src="images/joint.png">
+      <h2 class="title danger__title">การละเลยและการดูแลปัญหาไม่ถูกวิธี</h2>
+      <h3 class="danger__subtitle wow fadeInDown">ต้องเสียเงิน เวลา และยังเกิดอาการแทรกซ้อน</h3>
+      <h4 class="danger__progress">อาการนี้พัฒนาได้อย่างไร?</h4>
+      <div class="danger__content">
+        <div class="danger__item"><span class="danger__num">1</span>
+          <p class="danger__text danger__text--first wow fadeInDown">มีปัญหาใน<span class="danger__item--bold">การงอข้อต่อ</span> รู้สึกเจ็บ และมีขนาดใหญ่ขึ้น บริเวณที่ปวดเริ่มมีการอักเสบและบวม</p>
+          <div class="danger__pic">
+            <picture>
+              <source type="image/webp" srcset="images/danger-1.webp">
+                <img src="images/danger-1.jpg" alt="img" class="danger__pic--img">
+            </picture>
+            <p class="danger__pic--quote">สิ่งที่คุณรู้สึก:</p>
+          </div>
+          <h4 class="danger__problem wow fadeIn">เคลื่อนไหวได้อย่างจำกัด</h4>
+          <p class="danger__text danger__text--second wow fadeInDown">การเดินไปจ่ายตลาด หรือแม้แต่เดินเล่นในสวนกลายเป็นเรื่องท้าทาย ปวดขาและหลังจนต้องหยุดเดิน และหาที่นั่งพัก</p>
+        </div>
+        <div class="danger__item"><span class="danger__num">2</span>
+          <p class="danger__text danger__text--first wow fadeInDown">ทุกการเคลื่อนไหว<span class="danger__item--bold">เต็มไปด้วยความเจ็บปวด</span> อากาศเปลี่ยนแปลง หรือการทำกิจกรรมที่ต้องเคลื่อไหว ส่งผลต่อข้อต่อของคุณ</p>
+          <div class="danger__pic">
+            <picture>
+              <source type="image/webp" srcset="images/danger-2.webp">
+                <img src="images/danger-2.jpg" alt="img" class="danger__pic--img">
+            </picture>
+            <p class="danger__pic--quote">สิ่งที่คุณรู้สึก:</p>
+          </div>
+          <h4 class="danger__problem  wow fadeIn">อาการปวดและอาการเสพติด</h4>
+          <p class="danger__text danger__text--second wow fadeInDown">ความจำเป็นต้องใช้ยาแก้ปวด ทำให้เกิดผลข้างเคียงมากมาย นี่คือภาระหนักสำหรับอวัยวะภายในร่างกาย</p>
+        </div>
+        <div class="danger__item"><span class="danger__num">3</span>
+          <p class="danger__text danger__text--first wow fadeInDown">เป็นเรื่องยากสำหรับบางคนในการเคลื่อนไหว หรือทำกิจวัตรต่างๆ โดยไม่มีคนช่วยเหลือ</p>
+          <div class="danger__pic">
+            <picture>
+              <source type="image/webp" srcset="images/danger-3.webp">
+                <img src="images/danger-3.jpg" alt="img" class="danger__pic--img">
+            </picture>
+            <p class="danger__pic--quote wow fadeIn">สิ่งที่คุณรู้สึก:</p>
+          </div>
+          <h4 class="danger__problem">รู้สึกเป็นภาระ</h4>
+          <p class="danger__text danger__text--second wow fadeInDown">เมื่อเวลาผ่านไปปัญหาอาจจะแย่ลง และทำให้ยากที่จะทำกิจวัตรต่างๆ ได้เหมือนเดิม หรือแม้แต่การดูแลตัวเอง</p>
+        </div>
+      </div>
+      <h4 class="danger__return wow fadeInDown"><span class="danger__return--bold">อย่ารอให้เกิดภาวะแทรกซ้อนและผลลัพธ์ที่เกินจะแก้ไขได้</span> ลงมือตั้งแต่วันนี้! เป็นเรื่องง่ายกว่าในการฟื้นฟูข้อต่อตั้งแต่ระยะเริ่มต้น</h4>
+      <a href="#lastform"><div class="btn danger__btn ever-popup-btn  wow flipInX">เริ่มเลยตอนนี้!</div></a>
+    </div>
+  </section>
+  <section class="benefits block">
+    <div class="wrap">
+      <div class="benefits__wrap">
+        <div class="product-block">
+          <picture>
+            
+            <img class="product" src="images/flexadel.png" alt="product">
+          </picture>
+        </div>
+        <div class="content">
+          <h2 class="title benefits__title"><span class="reviews__subtitle--orange">Flexadel</span> ผลิตภัณฑ์สำหรับข้อต่อ</h2>
+          <p class="desc">ช่วยคืนชีวิตที่คล่องแคล่วให้คุณ</p>
+        </div>
+      </div>
+      <h4 class="ttl text-bold">หนึ่งคอร์สให้ผลลัพธ์:</h4>
+      <div class="benefits__cols">
+        <div class="col col-1">
+          <div class="age age-1">
+            <div class="shadow">
+              <div class="value"> 30<span>+</span> </div>
+            </div>
+              <span class="text">ปี</span>
+          </div>
+          <div class="item">
+            <picture>
+              <source type="image/webp" srcset="images/benefits-1.webp">
+              <img src="images/benefits-1.jpg" alt="item__img" class="img wow fadeIn" data-wow-delay=".1s">
+            </picture>
+            <p class="item__benefits-text text-semibold"><span class="desc">ไปสู่<br>การท่องเที่ยวที่รอคุณอยู่</span>
+            </p>
+          </div>
+          <div class="item">
+            <picture>
+              <source type="image/webp" srcset="images/benefits-2.webp">
+              <img src="images/benefits-2.jpg" alt="item__img" class="img wow fadeIn" data-wow-delay=".2s">
+            </picture>
+            <p class="item__benefits-text text-semibold"><span class="desc">ทำกิจกรรม<br>นอกบ้าน</span></p>
+          </div>
+        </div>
+        <div class="col col-2">
+          <div class="age age-2">
+            <div class="shadow">
+            <div class="value">45<span>+</span></div>
+          </div>
+            <span class="text">ปี</span>
+          </div>
+          <div class="item">
+            <picture>
+              <source type="image/webp" srcset="images/benefits-3.webp">
+              <img src="images/benefits-3.jpg" alt="item__img" class="img wow fadeIn" data-wow-delay=".3s">
+            </picture>
+            <p class="item__benefits-text text-semibold"><span class="desc">ทำสิ่งที่คุณรัก<br>โดยปราศจากความเจ็บปวด</span>
+            </p>
+          </div>
+          <div class="item">
+            <picture>
+              <source type="image/webp" srcset="images/benefits-4.webp">
+              <img src="images/benefits-4.jpg" alt="item__img" class="img wow fadeIn" data-wow-delay=".4s">
+            </picture>
+            <p class="item__benefits-text text-semibold"><span class="desc">เพลิดเพลินไปกับ<br>ทุกวันของชีวิต</span></p>
+          </div>
+        </div>
+        <div class="col col-3">
+          <div class="age age-3">
+            <div class="shadow">
+            <div class="value">60<span>+</span></div>
+          </div>
+            <span class="text">ปี</span>
+          </div>
+          <div class="item">
+            <picture>
+              <source type="image/webp" srcset="images/benefits-5.webp">
+              <img src="images/benefits-5.jpg" alt="item__img" class="img wow fadeIn" data-wow-delay=".5s">
+            </picture>
+            <p class="item__benefits-text text-semibold"><span class="desc">เล่นกับหลานๆ </span></p>
+          </div>
+          <div class="item">
+            <picture>
+              <source type="image/webp" srcset="images/benefits-6.webp">
+              <img src="images/benefits-6.jpg" alt="item__img" class="img wow fadeIn" data-wow-delay=".6s">
+            </picture>
+            <p class="item__benefits-text text-semibold"><span class="desc">ไปตกปลา</span></p>
+          </div>
+        </div>
+      </div>
+      <h3 class="benefits__result"><span>ใช้ชีวิตที่ปราศจากอาการปวด</span> เพื่อเติมเติมเต็มชีวิตคุณ</h3>
+      <div class="form-wrap">
+        <form action="https://healthbestblog.space/cpatl/api.php" method="post" class="x_order_form benefits__form wow flipInX">
+          <div>
+            <p class="form__title">วันนี้เท่านั้น <span class="date-0 color-orange text-nowrap" data-format="dd month">03 สิงหาคม</span></p>
+            <div class="price">
+              <div class="old">
+                <p class="old__text">ราคาปกติ</p>
+                <p class="text-nowrap"><span class="old__value x_price_previous"><x-oldprice>1980</x-oldprice></span><span class="old__current x_currency"><x-currency>฿</x-currency></span></p>
+              </div>
+              <span class="price-line"></span>
+              <div class="new">
+                <p class="new__text">ราคาพิเศษ</p>
+                <p class="text-nowrap"><span class="new__value x_price_current"><x-newprice>990</x-newprice></span><span class="new__current x_currency"><x-currency>฿</x-currency></span></p>
+              </div>
+            </div>
+          </div>
+		     
+    <select name="offer" class="form-control country_chang" style="display: none;">
+        <option data-country-code="TH" selected="selected" value="19155">
+            Таиланд        </option>
+    </select>
+
+              <div class="input-box"><i class="fico fico-name"></i> <input class="form-field form-name" name="name" placeholder="ชื่อ-นามสกุล" required autocomplete="name" type="text"></div>
+          <div class="input-box"><i class="fico fico-tel"></i><input class="form-field form-tel" name="phone" placeholder="หมายเลขโทรศัพท์" required autocomplete="tel" type="tel"></div>
+          <button type="submit" class="btn benefits__btn text-bold">
+            <span>สั่งซื้อ Flexadel <span class="small">ในราคาพิเศษ</span> </span>
+          </button>
+          		<input type="hidden" name="stream_hid" value="wV6URo6j">
+			<input type="hidden" name="offer_id" value="4692">
+
+			
+			<input type="hidden" name="country" value="TH"> <!-- формат ISO 3166-1 Alpha-2 - https://ru.wikipedia.org/wiki/ISO_3166-1 -->
+
+			<input type="hidden" name="sid1" value="alex">
+			<input type="hidden" name="sid2" value="alex2">
+			<input type="hidden" name="sid3" value="alex3">
+			<input type="hidden" name="redirect_url" value="https://amazinghealth.github.io/germitox-ita/success/index.html">
+        </form>
+      </div>
+    </div>
+  </section>
+ 
+  <section class="organs block">
+    <div class="container">
+      <h2 class="title title-organs">การทำงานของ <span class="reviews__subtitle--orange">Flexadel</span></h2>
+      <div class="organs__wrap">
+        <div class="organs__left">
+          <div class="organs__item">
+            <div class="organs__info">
+              <p class="organs__name">ช่วยบรรเทาการอักเสบ ให้อิสระในการเคลื่อนไหว</p>
+              <p class="organs__text">คุณสามารถยืดและงอข้อต่อได้อย่างง่ายดาย </p>
+            </div>
+            <div class="organs__img-wrap">
+              <div class="organs__img">
+                <picture>
+                  <source type="image/webp" srcset="images/organ1.webp">
+                  <img src="images/organ1.png">
+                </picture>
+              </div>
+              <div class="organs__dot organs__dot-1"></div>
+            </div>
+          </div>
+          <div class="organs__item">
+            <div class="organs__info">
+              <p class="organs__name">ช่วยเติมของเหลวที่จำเป็นต่อกระดูกอ่อนในข้อต่อ </p>
+              <p class="organs__text">ความรู้สึกไม่สบายในข้อต่อ และเสียงกระดูกลั่นหายไป </p>
+            </div>
+            <div class="organs__img-wrap">
+              <div class="organs__img">
+                <picture>
+                  <source type="image/webp" srcset="images/organ2.webp">
+                  <img src="images/organ2.png">
+                </picture>
+              </div>
+              <div class="organs__dot organs__dot-2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="organs__mid"><img src="images/organ-man.png"></div>
+        <div class="organs__right">
+          <div class="organs__item">
+            <div class="organs__img-wrap">
+              <div class="organs__img">
+                <picture>
+                  <source type="image/webp" srcset="images/organ3.webp">
+                  <img src="images/organ3.png">
+                </picture>
+              </div>
+              <div class="organs__dot organs__dot-3"></div>
+            </div>
+            <div class="organs__info">
+              <p class="organs__name">เสริมสร้างความแข็งแรงของกระดูกอ่อนในข้อต่อ</p>
+              <p class="organs__text">ไม่รู้สึกปวดข้อต่อหลังการใช้งานหนักหรือใช้งานบ่อย</p>
+            </div>
+          </div>
+          <div class="organs__item">
+            <div class="organs__img-wrap">
+              <div class="organs__img">
+                <picture>
+                  <source type="image/webp" srcset="images/organ4.webp">
+                  <img src="images/organ4.png">
+                </picture>
+              </div>
+              <div class="organs__dot organs__dot-4"></div>
+            </div>
+            <div class="organs__info">
+              <p class="organs__name">ช่วยมอบสารอาหารให้กับเนื้อเยื่อกระดูกอ่อน</p>
+              <p class="organs__text">ข้อต่อแข็งแรงและทนทานต่อการสึกหรอ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="efficiency block">
+    <div class="wrap">
+      <h2 class="title efficiency__title"><span class="color-light"><span class="reviews__subtitle--orange">Flexadel</span></span> มีประสิทธิภาพสูง</h2>
+      <p class="efficiency__desc wow fadeInDown">ด้วยความสามารถในการแทรกซึมและส่วนผสมที่ทรงพลัง</p>
+      <div class="efficiency__content">
+        <div class="col">
+          <div class="col__item col__item-1">
+            <picture>
+              <source type="image/webp" srcset="images/efficiency-1.webp">
+                <img class="item-pick" src="images/efficiency-1.png" alt="item_pick">
+            </picture>
+            <h3 class="ttl wow fadeIn">น้ำมันอัลมอนด์หวาน</h3>
+            <p class="text wow fadeInDown">ช่วยบรรเทาอาการปวด แทรกซึมลึกเข้าไปในเนื้อเยื่อและกระตุ้นกระบวนการเผาผลาญในเนื้อเยื่อ</p>
+          </div>
+          <div class="col__item col__item-2">
+            <picture>
+              <source type="image/webp" srcset="images/efficiency-2.webp">
+                <img class="item-pick" src="images/efficiency-2.png" alt="item_pick">
+            </picture>
+            <h3 class="ttl wow fadeIn">สารสกัดจากพริก</h3>
+            <p class="text wow fadeInDown">ช่วยกระตุ้นการไหลเวียนโลหิตในข้อต่อ  บรรเทาอาการปวด ทำให้รู้สึกอุ่นบนผิว</p>
+          </div>
+        </div>
+        <div class="center">
+          <div class="center__dot center__dot-1"></div>
+          <div class="center__dot center__dot-2"></div>
+          <div class="center__dot center__dot-3"></div>
+          <div class="center__dot center__dot-4"></div>
+          <picture>
+            <source type="image/webp" srcset="images/efficiency-pick.webp">
+            <img class="efficiency__img" src="images/efficiency-pick.png" alt="efficiency-pick">
+          </picture>
+        </div>
+        <div class="col">
+          <div class="col__item col__item-3">
+            <picture>
+              <source type="image/webp" srcset="images/efficiency-3.webp">
+                <img class="item-pick" src="images/efficiency-3.png" alt="item_pick">
+            </picture>
+            <h3 class="ttl wow fadeIn">สารสกัดจากว่านหางจระเข้</h3>
+            <p class="text wow fadeInDown">บรรเทาอาการบวม มีคุณสมบัติต้านจุลชีพ  เร่งกระบวนการบำบัดของเนื้อเยื่อ</p>
+          </div>
+          <div class="col__item col__item-4"><img class="item-pick" src="images/efficiency-4.png" alt="item_pick">
+            <h3 class="ttl wow fadeIn">น้ำมันเมล็ดทานตะวัน</h3>
+            <p class="text wow fadeInDown">ช่วยในการฟื้นฟูและซ่อมแซม ช่วยส่งเสริมการฟื้นฟูข้อต่อ</p>
+          </div>
+        </div>
+      </div>
+      <div class="form-wrap">
+        <form action="https://healthbestblog.space/cpatl/api.php" method="post" class="x_order_form efficiency__form wow flipInX">
+          <div>
+            <p class="form__title">วันนี้เท่านั้น <span class="date-0 color-orange text-nowrap" data-format="dd month">03 สิงหาคม</span></p>
+            <div class="price">
+              <div class="old">
+                <p class="old__text">ราคาปกติ</p>
+                <p class="text-nowrap"><span class="old__value x_price_previous"><x-oldprice>1980</x-oldprice></span><span class="old__current x_currency"><x-currency>฿</x-currency></span></p>
+              </div>
+              <span class="price-line"></span>
+              <div class="new">
+                <p class="new__text">ราคาพิเศษ</p>
+                <p class="text-nowrap"><span class="new__value x_price_current"><x-newprice>990</x-newprice></span><span class="new__current x_currency"><x-currency>฿</x-currency></span></p>
+              </div>
+            </div>
+          </div>
+   
+    <select name="offer" class="form-control country_chang" style="display: none;">
+        <option data-country-code="TH" selected="selected" value="19155">
+            Таиланд        </option>
+    </select>
+
+              <div class="input-box"><i class="fico fico-name"></i> <input class="form-field form-name" name="name" placeholder="ชื่อ-นามสกุล" required autocomplete="name" type="text"></div>
+          <div class="input-box"><i class="fico fico-tel"></i><input class="form-field form-tel" name="phone" placeholder="หมายเลขโทรศัพท์" required autocomplete="tel" type="tel"></div>
+          <div class="">
+            <button type="submit" class="btn efficiency__btn text-bold">
+              <span>สั่งซื้อ Flexadel <span class="small">ในราคาพิเศษ</span> </span>
+            </button>
+          </div>
+          		<input type="hidden" name="stream_hid" value="wV6URo6j">
+			<input type="hidden" name="offer_id" value="4692">
+
+			
+			<input type="hidden" name="country" value="TH"> <!-- формат ISO 3166-1 Alpha-2 - https://ru.wikipedia.org/wiki/ISO_3166-1 -->
+
+			<input type="hidden" name="sid1" value="alex">
+			<input type="hidden" name="sid2" value="alex2">
+			<input type="hidden" name="sid3" value="alex3">
+			<input type="hidden" name="redirect_url" value="https://amazinghealth.github.io/germitox-ita/success/index.html">
+         </form>
+      </div>
+    </div>
+  </section>
+  <section class="result block">
+    <div class="container"><img src="images/joint.png" class="result__joint wow flipInX">
+      <h2 class="title title-result">2334 คน มีส่วนร่วมในการทดสอบ <span class="reviews__subtitle--orange">Flexadel</span></h2>
+      <p class="result__under">ใช้ครีมเป็นตัวช่วยเสริมสำหรับข้อต่อ</p>
+      <div class="result__wrap">
+        <div class="result__sert">
+          <div class="result__img wow fadeIn" data-wow-delay=".1s">
+            <picture>
+              <source type="image/webp" srcset="images/sert1.webp">
+              <img src="images/sert1.jpg">
+            </picture>
+          </div>
+          <p class="result__country">สหรัฐฯ</p>
+        </div>
+        <div class="result__sert">
+          <div class="result__img wow fadeIn" data-wow-delay=".2s">
+            <picture>
+              <source type="image/webp" srcset="images/sert2.webp">
+              <img src="images/sert2.jpg">
+            </picture>
+          </div>
+          <p class="result__country">อิสราเอล</p>
+        </div>
+        <div class="result__sert">
+          <div class="result__img wow fadeIn" data-wow-delay=".3s">
+            <picture>
+              <source type="image/webp" srcset="images/sert3.webp">
+              <img src="images/sert3.jpg">
+            </picture>
+          </div>
+          <p class="result__country">รัสเซีย</p>
+        </div>
+      </div>
+      <div class="result__list">
+        <div class="result__item">
+          <div class="stat__circle stat__circle-result">
+            <div class="circe__svg-wrap">
+              <svg class="circle__svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 150 150" style="stroke-dasharray: 40, 434;">
+                <circle r="69" cx="75" cy="75"/>
+              </svg>
+            </div>
+            <div class="stat__number">
+              <p class="stat__count">92</p>
+              <p class="stat__what">%</p>
+            </div>
+          </div>
+          <p class="result__text">ช่วยกำจัดอาการปวดและไม่สบายได้</p>
+        </div>
+        <div class="result__item">
+          <div class="stat__circle stat__circle-result">
+            <div class="circe__svg-wrap">
+              <svg class="circle__svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 150 150" style="stroke-dasharray: 100, 434;">
+                <circle r="69" cx="75" cy="75"/>
+              </svg>
+            </div>
+            <div class="stat__number">
+              <p class="stat__count">87</p>
+              <p class="stat__what">%</p>
+            </div>
+          </div>
+          <p class="result__text">พบว่าเคลื่อนไหวได้ดีขึ้น</p>
+        </div>
+        <div class="result__item">
+          <div class="stat__circle stat__circle-result">
+            <div class="circe__svg-wrap">
+              <svg class="circle__svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 150 150" style="stroke-dasharray: 60, 434;">
+                <circle r="69" cx="75" cy="75"/>
+              </svg>
+            </div>
+            <div class="stat__number">
+              <p class="stat__count">79</p>
+              <p class="stat__what">%</p>
+            </div>
+          </div>
+          <p class="result__text">ช่วยกำจัดอาการฝืดและกระดูกลั่น</p>
+        </div>
+      </div>
+      <div class="result__bottom">
+        <div class="result__bottom-wrap wow fadeInDown">
+          <div class="result__organization"></div>
+          <div class="result__approve">
+            <p class="result__descr">ผลิตภัณฑ์ครีมที่ได้รับคะแนนสูงสุดสำหรับความสะดวกในการใช้และประสิทธิภาพ </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block how">
+    <div class="wrap">
+      <h2 class="title">วิธีใช้   <span class="reviews__subtitle--orange">Flexadel</span></h2>
+      <div class="how__content">
+        <div class="how__left">
+          <div class="how__prod">
+            <div class="product-block">
+              <picture>
+                
+                  <img class="how__prod--img" src="images/flexadel.png" alt="product">
+              </picture>
+            </div>
+          </div>
+          <a href="#lastform"><div class="how__btn btn ever-popup-btn">สั่งซื้อ<small class="small">พร้อมส่วนลด</small> </div></a>
+        </div>
+        <ul class="how__right">
+          <li class="how__item how__item--1 wow fadeInDown" data-wow-delay=".1s">
+            <div class="how__foto"><span class="how__foto--num">01 </span><img src="images/how-1.jpg" alt="foto" class="how__foto--img"></div>
+            <div class="how__text">
+              <h3 class="how__text--title">ล้างมือให้สะอาด</h3>
+              <p class="how__text--p">ด้วยน้ำอุ่น</p>
+            </div>
+          </li>
+          <li class="how__item how__item--2 wow fadeInDown" data-wow-delay=".2s">
+            <div class="how__foto"><span class="how__foto--num">02 </span><img src="images/how-2.jpg" alt="foto" class="how__foto--img"></div>
+            <div class="how__text">
+              <h3 class="how__text--title">ทาครีมลงบนบริเวณที่ต้องการ</h3>
+              <p class="how__text--p">นวดเป็นวงกลม</p>
+            </div>
+          </li>
+          <li class="how__item how__item--3 wow fadeInDown" data-wow-delay=".3s">
+            <div class="how__foto"><span class="how__foto--num">03 </span><img src="images/how-3.jpg" alt="foto" class="how__foto--img"></div>
+            <div class="how__text">
+              <h3 class="how__text--title">ใช้เป็นประจำทุกวัน</h3>
+              <p class="how__text--p">เป็นเวลา 30 วัน</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="block order">
+    <div class="wrap">
+      <h2 class="order__title title">สั่งซื้อ <span class="order__title--orange">Flexadel</span></h2>
+      <ul class="order__content">
+        <li class="order__item  order__item-1 wow fadeIn" data-wow-delay=".1s"><span class="order__num">1</span>
+          <div class="order__foto"><img src="images/order-1.png" alt="foto" class="order__foto--img order__foto--img1">
+          </div>
+          <p class="order__text">กรอกแบบฟอร์มการสั่งซื้อ</p>
+        </li>
+        <li class="order__el order__el--first"><img src="images/reviews__line_1.png" alt="el" class="order__el--img">
+        </li>
+        <li class="order__item wow fadeIn" data-wow-delay=".2s"><span class="order__num">2</span>
+          <div class="order__foto">
+            <picture>
+              <source type="image/webp" srcset="images/order-2.webp">
+                <img src="images/order-2.png" alt="foto" class="order__foto--img order__foto--img2">
+            </picture>
+          </div>
+          <p class="order__text">รอรับโทรศัพท์<br>จากตัวแทนจำหน่าย</p>
+        </li>
+        <li class="order__el order__el--second"><img src="images/reviews__line_1.png" alt="el" class="order__el--img">
+        </li>
+        <li class="order__item  wow fadeIn" data-wow-delay=".3s"><span class="order__num">3</span>
+          <div class="order__foto">
+            <picture>
+              <source type="image/webp" srcset="images/order-3.webp">
+                <img src="images/order-3.png" alt="foto" class="order__foto--img order__foto--img3">
+            </picture>
+          </div>
+          <p class="order__text">ชำระเงิน<br>หลังได้สินค้า</p>
+        </li>
+        <li class="order__el order__el--second"><img src="images/reviews__line_1.png" alt="el" class="order__el--img">
+        </li>
+        <li class="order__item order__item-4 wow fadeIn" data-wow-delay=".3s"><span class="order__num">4</span>
+          <div class="order__foto">
+            <picture>
+              <source type="image/webp" srcset="images/order-4.webp">
+                <img src="images/order-4.png" alt="foto" class="order__foto--img order__foto--img4">
+            </picture>
+          </div>
+          <p class="order__text">ฟื้นคืนสุขภาพข้อต่อ<br>เมื่อใช้ครบคอร์ส</p>
+        </li>
+      </ul>
+      <div class="order__line"></div>
+      <h3 class="order__subtitle">ตัวแทนของเราจะเป็นผู้ให้คำแนะนำ และตอบข้อสงสัยของคุณ เกี่ยวกับผลิตภัณฑ์  <span class="order__title--orange">Flexadel</span> <br>ทางโทรศัพท์</h3>
+    </div>
+  </section>
+  <section class="header block header--bottom">
+    <div class="wrap">
+
+      <div class="header__main">
+        <picture>
+          <source type="image/webp" srcset="images/header_back-1.webp">
+          <img src="images/header_back-1.png" alt="man" class="man">
+        </picture>
+        <div class="product-block">  
+          <picture>
+            
+            <img class="product-photo" src="images/flexadel.png" alt="product">
+          </picture>
+        </div>
+        <div class="info">
+          <div class="logo">
+            <span class="reviews__subtitle--orange">Flexadel</span>
+          </div>
+          <h1 class="header__title"><span class="text-bold">ตัวช่วยสำหรับข้อต่อของคุณ!</span></h1>
+          <p class="main__text">เรียกคืนความสะดวกสบายและความมั่นใจในทุกย่างก้าวของชีวิต!</p>
+          <ul class="info__list">
+            <li class="item"><i class="fico fico-check"></i> <b class="text-semibold">ช่วยบรรเทาปวด </b>และกำจัดอาการบวม </li>
+            <li class="item"><i class="fico fico-check"></i> <b class="text-semibold">ช่วยฟื้นฟูการเคลื่อนไหว</b>ของข้อต่อ </li>
+            <li class="item"><i class="fico fico-check"></i> <b class="text-semibold">ช่วยกำจัด</b>ความรู้สึกไม่สบายและอาการฝืดขณะเคลื่อนไหว </li>
+          </ul>
+          <div class="certificates">
+            <img src="images/icon1.png">
+            <img src="images/icon3.png">
+            <img src="images/expert1.png">
+          </div>
+        </div>
+        <div class="main__wrap">
+          <div class="main__form" id="lastform">
+            <p class="main__form-title"> ภายในวันที่ <br> <span class="date-0 color-orange" data-format="dd month">03 สิงหาคม</span> เท่านั้น </p>
+            <div class="price">
+              <div class="price-item price-old">
+                <p class="price-title price-title__old">ราคาปกติ:</p>
+                <div> <span class="x_price_previous"><x-oldprice>1980</x-oldprice></span><span class="x_currency"><x-currency>฿</x-currency></span> </div>
+              </div>
+              <span class="price-line"></span>
+              <div class="price-item price-new">
+                <p class="price-title price-title__new">ราคาพิเศษ:</p>
+                <div> <span class="x_price_current"><x-newprice>990</x-newprice></span><span class="x_currency"><x-currency>฿</x-currency></span> </div>
+              </div>
+            </div>
+            <form action="https://healthbestblog.space/cpatl/api.php" method="post" class="x_order_form form">
+			    
+    <select name="offer" class="form-control country_chang" style="display: none;">
+        <option data-country-code="TH" selected="selected" value="19155">
+            Таиланд        </option>
+    </select>
+
+                  <div class="input-box">
+                <i class="fico fico-name"></i>
+                <input class="form-field form-name" name="name" placeholder="ชื่อ-นามสกุล" required autocomplete="name" type="text">
+              </div>
+              <div class="input-box">
+                <i class="fico fico-tel"></i>
+                <input class="form-field form-tel" name="phone" placeholder="หมายเลขโทรศัพท์" required autocomplete="tel" type="tel">
+              </div>
+              <button type="submit" class="form__btn btn"> <span class="btn__text btn__text-1">สั่งซื้อ </span><span class="btn__text btn__text-2">พร้อมส่วนลด</span> </button>
+              <div class="users-count">
+                <p>มีคนดูอยู่ตอนนี้ 20 คน</p>
+              </div>
+              		<input type="hidden" name="stream_hid" value="wV6URo6j">
+			<input type="hidden" name="offer_id" value="4692">
+
+			
+			<input type="hidden" name="country" value="TH"> <!-- формат ISO 3166-1 Alpha-2 - https://ru.wikipedia.org/wiki/ISO_3166-1 -->
+
+			<input type="hidden" name="sid1" value="alex">
+			<input type="hidden" name="sid2" value="alex2">
+			<input type="hidden" name="sid3" value="alex3">
+			<input type="hidden" name="redirect_url" value="https://amazinghealth.github.io/germitox-ita/success/index.html">
+          </form>
+            <div class="main__discount discount">
+              <span class="discount-text">-50%</span>
+            </div>
+          </div>
+          <p class="lastpack-text"> หมายเหตุ! สินค้าคงเหลือ <span class="lastpack">60</span>  ชิ้น </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+ 
+<center><p>OOO "OSTROV PRODAZH" OGRN: 1197746695530 VAT: 7708365555</p>
+<p>129090, Moscow, pereulok Zhivarev, house 8, stroenie 3, flat 16 email: ostrov.prodazh@mail.com Skype: ostrov.prodazh@mail.com</p> 
+
+
+    
+            <p class="conf-link doclinks">
+        <a class="nav-link" href="" onclick="window.open('/policy_en.php'); return false;">Privacy Policy</a>
+          |
+        <a class="nav-link" href="" onclick="window.open('/terms_en.php'); return false;">Terms & Conditions</a>
+      </p>
+      
+    
+</center>
+
+<script src="js/jquery.min_1.js"></script>	
+<script src="js/index.js"></script>	
+	</body>
+</html>
